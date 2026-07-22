@@ -30,3 +30,6 @@ cv2.ellipse(canvas, (300, 300), (100, 50), 0, 0, 360, (255, 255, 0), -1)
 cv2.imshow("Canvas", canvas)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+
+#ebrar ergul
