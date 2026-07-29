@@ -3,9 +3,14 @@ import os
 
 # Resmin klasör yolunu otomatik ayarlar
 script_dir = os.path.dirname(__file__)
-image_path = os.path.join(script_dir, "klon.jpg")
+
+# Üçgen kontur resmini (5.1 contour.png (1).png) otomatik olarak arar
+contour_image = "5.1 contour.png (1).png" if os.path.exists(os.path.join(script_dir, "5.1 contour.png (1).png")) else "klon.jpg"
+image_path = os.path.join(script_dir, contour_image)
+
 
 img = cv2.imread(image_path)
+
 # Resmi varsayılan BGR renk formatında belleğe okur.
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

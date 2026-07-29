@@ -3,9 +3,14 @@ import os
 
 # Resmin klasör yolunu otomatik ayarlar
 script_dir = os.path.dirname(__file__)
-image_path = os.path.join(script_dir, "klon.jpg")
+
+# Harita resmini (8.1 map.jpg.jpg) otomatik olarak arar
+map_image = "8.1 map.jpg.jpg" if os.path.exists(os.path.join(script_dir, "8.1 map.jpg.jpg")) else "klon.jpg"
+image_path = os.path.join(script_dir, map_image)
+
 
 img = cv2.imread(image_path)
+
 # Resmi varsayılan BGR renk formatında belleğe okur.
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
